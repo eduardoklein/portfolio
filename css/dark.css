@@ -65,3 +65,10 @@ body.dark .introducao p {
 body.dark .experiencia-texto {
   color: #a3a3a3;
 }
+
+@media (max-width: 850px) {
+  body.dark .header a {
+    background: #141414;
+    border-radius: 4px;
+  }
+}
