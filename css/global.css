@@ -32,20 +32,15 @@ img {
 }
 
 .toggle-theme-sun {
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: auto;
   text-decoration: none;
   background: none;
   border: none;
 }
 
 .toggle-theme-moon {
-  width: 36px;
-  height: 36px;
-  text-decoration: none;
-  background: none;
-  border: none;
-  display: none;
+  display: none !important;
 }
 
 .toggle-language {

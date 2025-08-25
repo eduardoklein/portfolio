@@ -16,7 +16,12 @@ body.dark .toggle-theme-sun {
 }
 
 body.dark .toggle-theme-moon {
-  display: block;
+  width: 24px;
+  height: auto;
+  text-decoration: none;
+  background: none;
+  border: none;
+  display: flex !important;
 }
 
 body.dark .header-menu a {
