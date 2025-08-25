@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FullStack Developer located in Recife - PE"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Eduardo Klein</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo-name">Eduardo Klein</h1>
+      <nav>
+        <ul class="header-menu">
+          <li><a href="#experiencia">Experience</a></li>
+          <li><a href="#formacao">Education</a></li>
+          <li><a href="#contato">Contact</a></li>
+          <li>
+            <button class="toggle-language" onclick="changeLanguage('pt')">
+              🇧🇷
+            </button>
+          </li>
+          <li>
+            <button class="toggle-theme-sun" onclick="toggleTheme()">
+              <img src="./img/sun-2-svgrepo-com.svg" />
+            </button>
+            <button class="toggle-theme-moon" onclick="toggleTheme()">
+              <img src="./img/moon-svgrepo-com.svg" />
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="introducao">
+      <img
+        src="./img/minhaFoto.avif"
+        alt="30-year-old man with gray hair and glasses"
+        width="1280"
+        height="1038"
+      />
+      <div>
+        <h1>
+          Fullstack
+          <br />
+          Developer
+        </h1>
+        <p>Located in Recife 🦈</p>
+      </div>
+    </main>
+
+    <section class="experiencia" id="experiencia" aria-label="Experience">
+      <h2 class="subtitulo">Experience</h2>
+      <div>
+        <p class="experiencia-texto">
+          I have experience in web development, mainly working with
+          <strong>HTML</strong>, <strong>CSS</strong>,
+          <strong>JavaScript</strong>, <strong>React</strong>,
+          <strong>Node.js</strong>, <strong>TypeScript</strong>, and
+          <strong>SQL</strong>. I have worked on small and medium projects,
+          developing everything from landing pages to full web applications.
+        </p>
+        <div class="empresa">
+          <span class="empresa-ano">2016</span>
+          <h3 class="empresa-titulo-e-cargo">Effetive Sistemas</h3>
+          <span class="empresa-titulo-e-cargo"> Development Intern </span>
+          <p class="empresa-funcao">
+            During my internship at Effetive, I worked on solutions for Michelin
+            Latin America, participating in the creation and maintenance of
+            internal systems, data modeling, and process automation. I worked in
+            a team following Agile/Scrum practices, attending daily meetings to
+            monitor and align deliveries. This experience provided me with
+            hands-on exposure to good programming practices, databases, and
+            agile methodologies, as well as improved my programming logic and
+            ability to collaborate on impactful projects.
+          </p>
+          <ul class="empresa-habilidade">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>React</li>
+            <li>Scrum</li>
+            <li>Kanban</li>
+            <li>Teamwork</li>
+            <li>Communication</li>
+            <li>Organization</li>
+          </ul>
+        </div>
+        <div class="empresa">
+          <span class="empresa-ano">2014-2016</span>
+          <h3 class="empresa-titulo-e-cargo">
+            Administração do Porto de Suape
+          </h3>
+          <span class="empresa-titulo-e-cargo">IT Intern</span>
+          <p class="empresa-funcao">
+            During two years at the Suape Administrative Center, I worked as an
+            IT intern providing technical support to users, maintaining
+            equipment, assisting in system and network administration, and
+            organizing tickets while supporting different departments. This
+            experience allowed me to develop technical skills and strengthened
+            abilities such as responsibility, proactivity, and communication.
+          </p>
+          <ul class="empresa-habilidade">
+            <li>Windows</li>
+            <li>Linux</li>
+            <li>Networks</li>
+            <li>Technical Support</li>
+            <li>Hardware Maintenance</li>
+            <li>Teamwork</li>
+            <li>Proactivity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="formacao" id="formacao" aria-label="Education">
+      <div class="formacao-container">
+        <h2 class="subtitulo">Education</h2>
+        <div>
+          <p class="formacao-texto">
+            Currently, I am pursuing a
+            <strong>Bachelor's degree</strong>
+            in
+            <strong>Computer Science</strong>
+            at the International University Center, and I have a
+            <strong>technical course</strong>
+            in
+            <strong>Information Technology</strong>
+            from Maurício de Nassau University.
+          </p>
+          <ul class="faculdade-lista">
+            <li class="faculdade">
+              <span class="faculdade-tipo">Bachelor</span>
+              <h3 class="faculdade-curso">Computer Science</h3>
+              <span class="faculdade-instituicao">
+                International University Center
+              </span>
+            </li>
+            <li class="faculdade">
+              <span class="faculdade-tipo">Technical</span>
+              <h3 class="faculdade-curso">Information Technology</h3>
+              <span class="faculdade-instituicao">
+                Maurício de Nassau University
+              </span>
+            </li>
+            <li class="faculdade">
+              <span class="faculdade-tipo">Bachelor</span>
+              <h3 class="faculdade-curso">Law</h3>
+              <span class="faculdade-instituicao">Osman Lins College</span>
+            </li>
+          </ul>
+          <div class="formacao-extra">
+            <div class="cursos">
+              <h3>Intensive Courses</h3>
+              <ul>
+                <li>
+                  Elective Certification in Python
+                  <span>270h</span>
+                </li>
+              </ul>
+            </div>
+            <div class="idiomas">
+              <h3>Languages</h3>
+              <ul>
+                <li>
+                  English
+                  <span>/ Fluent</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer" id="contato">
+      <div class="footer-container">
+        <p class="footer-texto">
+          I am available for new opportunities! Get in touch with me and we can
+          arrange a conversation.
+        </p>
+        <ul class="footer-contato">
+          <li>eduardo.klein@live.com</li>
+          <li>+55 81 9 9753-4401</li>
+          <li>
+            <a href="https://www.linkedin.com/in/eduardo-klein-c/">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/eduardoklein">GitHub</a>
+          </li>
+        </ul>
+        <p class="footer-copy">Eduardo Klein. Some rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

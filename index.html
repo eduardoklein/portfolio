@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Desenvolvedor FullStack localizado em Recife - PE"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Eduardo Klein</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo-name">Eduardo Klein</h1>
+      <nav>
+        <ul class="header-menu">
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li>
+            <button class="toggle-language" onclick="changeLanguage('en')">
+              🇺🇸
+            </button>
+          </li>
+          <li>
+            <button class="toggle-theme-sun" onclick="toggleTheme()">
+              <img src="./img/sun-2-svgrepo-com.svg" />
+            </button>
+            <button class="toggle-theme-moon" onclick="toggleTheme()">
+              <img src="./img/moon-svgrepo-com.svg" />
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="introducao">
+      <img
+        src="./img/minhaFoto.avif"
+        alt="homem de 30 anos com cabelo grisalho e óculos"
+        width="1280"
+        height="1038"
+      />
+      <div>
+        <h1>
+          Desenvolvedor
+          <br />
+          Fullstack
+        </h1>
+        <p>Localizado em Recife 🦈</p>
+      </div>
+    </main>
+
+    <section class="experiencia" id="experiencia" aria-label="Experiência">
+      <h2 class="subtitulo">Experiência</h2>
+      <div>
+        <p class="experiencia-texto">
+          Tenho experiência com desenvolvimento web, atuando principalmente com
+          <strong>HTML</strong>, <strong>CSS</strong>,
+          <strong>JavaScript</strong>, <strong>React</strong>,
+          <strong>Node.js</strong>, <strong>TypeScript</strong> e
+          <strong>SQL</strong>. Já trabalhei em projetos de pequeno e médio
+          porte, desenvolvendo desde landing pages até aplicações web completas.
+        </p>
+        <div class="empresa">
+          <span class="empresa-ano">2016</span>
+          <h3 class="empresa-titulo-e-cargo">Effetive Sistemas</h3>
+          <span class="empresa-titulo-e-cargo">
+            Estagiário em Desenvolvimento
+          </span>
+          <p class="empresa-funcao">
+            Durante meu estágio na Effetive, atuei no desenvolvimento de
+            soluções para a Michelin da América Latina, participando da criação
+            e manutenção de sistemas internos, modelagem de dados e automação de
+            processos. Trabalhei em equipe seguindo práticas do Agile/Scrum,
+            participando de reuniões diárias (dailies) para acompanhamento e
+            alinhamento das entregas. Essa experiência me proporcionou contato
+            direto com boas práticas de programação, banco de dados e
+            metodologias ágeis, além de aprimorar minha lógica de programação e
+            capacidade de colaborar em projetos de impacto real.
+          </p>
+          <ul class="empresa-habilidade">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>React</li>
+            <li>Scrum</li>
+            <li>Kanban</li>
+            <li>Trabalho em equipe</li>
+            <li>Comunicação</li>
+            <li>Organização</li>
+          </ul>
+        </div>
+        <div class="empresa">
+          <span class="empresa-ano">2014-2016</span>
+          <h3 class="empresa-titulo-e-cargo">
+            Administração do Porto de Suape
+          </h3>
+          <span class="empresa-titulo-e-cargo">Estagiário de TI</span>
+          <p class="empresa-funcao">
+            Durante dois anos no Centro Administrativo do Porto de Suape, atuei
+            como estagiário de TI prestando suporte técnico a usuários,
+            realizando manutenção de equipamentos, auxiliando na administração
+            de sistemas e redes, além de organizar chamados e apoiar diferentes
+            setores. Essa experiência me proporcionou desenvolvimento técnico e
+            fortaleceu habilidades como responsabilidade, proatividade e
+            comunicação.
+          </p>
+          <ul class="empresa-habilidade">
+            <li>Windows</li>
+            <li>Linux</li>
+            <li>Redes</li>
+            <li>Suporte Técnico</li>
+            <li>Manutenção de Hardware</li>
+            <li>Trabalho em equipe</li>
+            <li>Proatividade</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="formacao" id="formacao" aria-label="Formação">
+      <div class="formacao-container">
+        <h2 class="subtitulo">Formação</h2>
+        <div>
+          <p class="formacao-texto">
+            No momento estou cursando o
+            <strong>bacharelado</strong>
+            em
+            <strong>Ciências da Computação</strong>
+            no Centro Universitário Internacional, e tenho um curso
+            <strong>técnico</strong>
+            em
+            <strong>Tecnologia da Informação</strong>
+            pela Universidade Maurício de Nassau.
+          </p>
+          <ul class="faculdade-lista">
+            <li class="faculdade">
+              <span class="faculdade-tipo">Bacharel</span>
+              <h3 class="faculdade-curso">Ciências da Computação</h3>
+              <span class="faculdade-instituicao">
+                Centro Universitário Internacional
+              </span>
+            </li>
+            <li class="faculdade">
+              <span class="faculdade-tipo">Técnico</span>
+              <h3 class="faculdade-curso">Tecnologia da Informação</h3>
+              <span class="faculdade-instituicao">
+                Faculdade Maurício de Nassau
+              </span>
+            </li>
+            <li class="faculdade">
+              <span class="faculdade-tipo">Bacharel</span>
+              <h3 class="faculdade-curso">Direito</h3>
+              <span class="faculdade-instituicao">Faculdade Osman Lins</span>
+            </li>
+          </ul>
+          <div class="formacao-extra">
+            <div class="cursos">
+              <h3>Cursos Intensivos</h3>
+              <ul>
+                <li>
+                  Certificação Eletiva em Python
+                  <span>270h</span>
+                </li>
+              </ul>
+            </div>
+            <div class="idiomas">
+              <h3>Idiomas</h3>
+              <ul>
+                <li>
+                  Inglês
+                  <span>/ Fluente</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer" id="contato">
+      <div class="footer-container">
+        <p class="footer-texto">
+          Estou disponível para novas oportunidades no momento! Entre em contato
+          comigo e marcamos uma conversa.
+        </p>
+        <ul class="footer-contato">
+          <li>eduardo.klein@live.com</li>
+          <li>+55 81 9 9753-4401</li>
+          <li>
+            <a href="https://www.linkedin.com/in/eduardo-klein-c/">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://github.com/eduardoklein">GitHub</a>
+          </li>
+        </ul>
+        <p class="footer-copy">Eduardo Klein. Alguns direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

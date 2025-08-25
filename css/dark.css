@@ -1,0 +1,67 @@
+body.dark {
+  background: #000;
+  color: #fff;
+}
+
+body.dark strong {
+  color: #fff;
+}
+
+body.dark .experiencia .subtitulo {
+  color: #141414;
+}
+
+body.dark .toggle-theme-sun {
+  display: none;
+}
+
+body.dark .toggle-theme-moon {
+  display: block;
+}
+
+body.dark .header-menu a {
+  color: #fff;
+}
+
+body.dark .experiencia .subtitulo {
+  color: #e0e0e0;
+}
+
+body.dark .empresa {
+  background: #141414;
+}
+
+body.dark .empresa-ano {
+  color: #a3a3a3;
+}
+
+body.dark .empresa-titulo-e-cargo {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+body.dark .empresa-funcao {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #a3a3a3;
+}
+
+body.dark .empresa-habilidade {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+}
+
+body.dark .empresa-habilidade li {
+  background: #000;
+}
+
+body.dark .introducao p {
+  color: #a3a3a3;
+}
+
+body.dark .experiencia-texto {
+  color: #a3a3a3;
+}
