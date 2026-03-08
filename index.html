@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!doctype html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Desenvolvedor FullStack localizado em Recife - PE"
+      content="Portfólio de Eduardo Klein, desenvolvedor full stack em Recife com foco em experiências web consistentes e produtos úteis."
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Eduardo Klein</title>
+    <title>Eduardo Klein | Desenvolvedor Full Stack</title>
   </head>
   <body>
     <header class="header">
-      <h1 class="logo-name">Eduardo Klein</h1>
-      <nav>
+      <a class="logo-name" href="#inicio">Eduardo Klein</a>
+      <nav aria-label="Primária">
         <ul class="header-menu">
           <li><a href="#experiencia">Experiência</a></li>
           <li><a href="#formacao">Formação</a></li>
@@ -21,29 +21,80 @@
         </ul>
       </nav>
       <div class="header-user-preferences">
-        <a class="toggle-language" onclick="changeLanguage('en')"> 🇺🇸 </a>
-        <a class="toggle-theme-sun" onclick="toggleTheme()">
-          <img src="./img/sun-2-svgrepo-com.svg" />
-        </a>
-        <a class="toggle-theme-moon" onclick="toggleTheme()">
-          <img src="./img/moon-svgrepo-com.svg" />
-        </a>
+        <button
+          class="toggle-language"
+          type="button"
+          onclick="changeLanguage('en')"
+          aria-label="Mudar idioma para inglês"
+        >
+          EN
+        </button>
+        <button
+          class="toggle-theme toggle-theme-sun"
+          type="button"
+          onclick="toggleTheme()"
+          aria-label="Ativar tema escuro"
+        >
+          <img src="./img/sun-2-svgrepo-com.svg" alt="" />
+        </button>
+        <button
+          class="toggle-theme toggle-theme-moon"
+          type="button"
+          onclick="toggleTheme()"
+          aria-label="Ativar tema claro"
+        >
+          <img src="./img/moon-svgrepo-com.svg" alt="" />
+        </button>
       </div>
     </header>
-    <main class="introducao">
-      <img
-        src="./img/minhaFoto.avif"
-        alt="homem de 30 anos com cabelo grisalho e óculos"
-        width="1280"
-        height="1038"
-      />
-      <div>
+
+    <main class="introducao" id="inicio">
+      <div class="intro-copy">
         <h1>
-          Desenvolvedor
-          <br />
-          Fullstack
+          Desenvolvedor full stack com foco em interfaces claras e entrega
+          sólida.
         </h1>
-        <p>Localizado em Recife 🦈</p>
+        <p class="intro-texto">
+          Trabalho com front-end, back-end e evolução de produto para
+          transformar ideias em aplicações objetivas, rápidas e fáceis de
+          manter.
+        </p>
+        <ul class="intro-highlights" aria-label="Especialidades">
+          <li>React e TypeScript</li>
+          <li>PHP, Laravel e SQL</li>
+          <li>UX orientada a negócio</li>
+        </ul>
+        <dl class="intro-stats" aria-label="Resumo profissional">
+          <div>
+            <dt>Atuação</dt>
+            <dd>Full stack</dd>
+          </div>
+          <div>
+            <dt>Base</dt>
+            <dd>Recife, PE</dd>
+          </div>
+          <div>
+            <dt>Idioma</dt>
+            <dd>PT-BR / EN</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="intro-visual">
+        <div class="intro-photo-frame">
+          <img
+            src="./img/minhaFoto.avif"
+            alt="Eduardo Klein"
+            width="1280"
+            height="1038"
+          />
+        </div>
+        <div class="intro-card">
+          <strong>Resumo</strong>
+          <p>
+            Experiência com desenvolvimento web, suporte técnico, processos
+            ágeis e construção de soluções internas para operações reais.
+          </p>
+        </div>
       </div>
     </main>
 
@@ -52,28 +103,54 @@
       <div>
         <p class="experiencia-texto">
           Tenho experiência com desenvolvimento web, atuando principalmente com
-          <strong>HTML</strong>, <strong>CSS</strong>,
+          <strong>PHP</strong>, <strong>Laravel</strong>,
           <strong>JavaScript</strong>, <strong>React</strong>,
-          <strong>Node.js</strong>, <strong>TypeScript</strong> e
-          <strong>SQL</strong>. Já trabalhei em projetos de pequeno e médio
-          porte, desenvolvendo desde landing pages até aplicações web completas.
+          <strong>Vue.js</strong>, <strong>Node.js</strong>,
+          <strong>TypeScript</strong> e <strong>SQL</strong>. Hoje, PHP e
+          Laravel fazem parte da minha stack principal no trabalho atual, com
+          foco em manutenção, evolução de sistemas e entrega de interfaces com
+          boa experiência de uso.
         </p>
+
+        <div class="empresa">
+          <span class="empresa-ano">nov de 2025 - atual</span>
+          <h3 class="empresa-titulo-e-cargo">Evenyx</h3>
+          <span class="empresa-titulo-e-cargo"
+            >Junior Full Stack Developer</span
+          >
+          <p class="empresa-funcao">
+            Atuo na manutenção e evolução de sistemas de alto tráfego da
+            plataforma de ticketing e gestão de eventos da Evenyx, com trabalho
+            full stack no ecossistema Laravel. Desenvolvo soluções backend em
+            PHP seguindo padrões arquiteturais do framework, construo interfaces
+            reativas com Vue.js e React, integro APIs REST com MySQL e participo
+            ativamente de correções, code reviews e entrega de novas
+            funcionalidades em ambiente ágil.
+          </p>
+          <ul class="empresa-habilidade">
+            <li>Laravel</li>
+            <li>PHP</li>
+            <li>Vue.js</li>
+            <li>React</li>
+            <li>MySQL</li>
+            <li>APIs REST</li>
+            <li>Code Review</li>
+            <li>Agile</li>
+          </ul>
+        </div>
+
         <div class="empresa">
           <span class="empresa-ano">2016</span>
           <h3 class="empresa-titulo-e-cargo">Effetive Sistemas</h3>
-          <span class="empresa-titulo-e-cargo">
-            Estagiário em Desenvolvimento
-          </span>
+          <span class="empresa-titulo-e-cargo"
+            >Estagiário em Desenvolvimento</span
+          >
           <p class="empresa-funcao">
-            Durante meu estágio na Effetive, atuei no desenvolvimento de
-            soluções para a Michelin da América Latina, participando da criação
-            e manutenção de sistemas internos, modelagem de dados e automação de
-            processos. Trabalhei em equipe seguindo práticas do Agile/Scrum,
-            participando de reuniões diárias (dailies) para acompanhamento e
-            alinhamento das entregas. Essa experiência me proporcionou contato
-            direto com boas práticas de programação, banco de dados e
-            metodologias ágeis, além de aprimorar minha lógica de programação e
-            capacidade de colaborar em projetos de impacto real.
+            Atuei no desenvolvimento de soluções para a Michelin da América
+            Latina, participando da criação e manutenção de sistemas internos,
+            modelagem de dados e automação de processos. Trabalhei em equipe com
+            práticas Agile/Scrum, ganhando repertório em programação, banco de
+            dados e entregas com impacto operacional.
           </p>
           <ul class="empresa-habilidade">
             <li>HTML</li>
@@ -88,6 +165,7 @@
             <li>Organização</li>
           </ul>
         </div>
+
         <div class="empresa">
           <span class="empresa-ano">2014-2016</span>
           <h3 class="empresa-titulo-e-cargo">
@@ -95,50 +173,43 @@
           </h3>
           <span class="empresa-titulo-e-cargo">Estagiário de TI</span>
           <p class="empresa-funcao">
-            Durante dois anos no Centro Administrativo do Porto de Suape, atuei
-            como estagiário de TI prestando suporte técnico a usuários,
-            realizando manutenção de equipamentos, auxiliando na administração
-            de sistemas e redes, além de organizar chamados e apoiar diferentes
-            setores. Essa experiência me proporcionou desenvolvimento técnico e
-            fortaleceu habilidades como responsabilidade, proatividade e
-            comunicação.
+            Prestei suporte técnico a usuários, realizei manutenção de
+            equipamentos e dei apoio à administração de sistemas e redes. Foi
+            uma base importante para desenvolver responsabilidade, comunicação e
+            visão prática de operação.
           </p>
           <ul class="empresa-habilidade">
             <li>Windows</li>
             <li>Linux</li>
             <li>Redes</li>
-            <li>Suporte Técnico</li>
-            <li>Manutenção de Hardware</li>
-            <li>Trabalho em equipe</li>
+            <li>Suporte técnico</li>
+            <li>Hardware</li>
             <li>Proatividade</li>
+            <li>Atendimento</li>
           </ul>
         </div>
       </div>
     </section>
+
     <section class="formacao" id="formacao" aria-label="Formação">
       <div class="formacao-container">
         <h2 class="subtitulo">Formação</h2>
         <div>
           <p class="formacao-texto">
-            No momento estou cursando o
-            <strong>bacharelado</strong>
-            em
-            <strong>Ciências da Computação</strong>
-            no Centro Universitário Internacional, e tenho um curso
-            <strong>bootcamp</strong>
-            em <strong>Desenvolvimento Web</strong> pela Trybe, além de um curso
-            <strong>técnico</strong>
-            em
-            <strong>Tecnologia da Informação</strong>
-            pela Universidade Maurício de Nassau.
+            Atualmente curso <strong>Ciência da Computação</strong> e também
+            construí base prática com um <strong>bootcamp</strong> de
+            <strong>Desenvolvimento Web</strong> pela Trybe e formação
+            <strong>técnica</strong> em
+            <strong>Tecnologia da Informação</strong>.
           </p>
+
           <ul class="faculdade-lista">
             <li class="faculdade">
               <span class="faculdade-tipo">Bacharel</span>
-              <h3 class="faculdade-curso">Ciências da Computação</h3>
-              <span class="faculdade-instituicao">
-                Centro Universitário Internacional
-              </span>
+              <h3 class="faculdade-curso">Ciência da Computação</h3>
+              <span class="faculdade-instituicao"
+                >Centro Universitário Internacional</span
+              >
             </li>
             <li class="faculdade">
               <span class="faculdade-tipo">Bootcamp</span>
@@ -148,9 +219,9 @@
             <li class="faculdade">
               <span class="faculdade-tipo">Técnico</span>
               <h3 class="faculdade-curso">Tecnologia da Informação</h3>
-              <span class="faculdade-instituicao">
-                Faculdade Maurício de Nassau
-              </span>
+              <span class="faculdade-instituicao"
+                >Faculdade Maurício de Nassau</span
+              >
             </li>
             <li class="faculdade">
               <span class="faculdade-tipo">Bacharel</span>
@@ -158,48 +229,64 @@
               <span class="faculdade-instituicao">Faculdade Osman Lins</span>
             </li>
           </ul>
+
           <div class="formacao-extra">
             <div class="cursos">
               <h3>Cursos Intensivos</h3>
               <ul>
-                <li>
-                  Certificação Eletiva em Python
-                  <span>270h</span>
-                </li>
+                <li>Certificação Eletiva em Python <span>270h</span></li>
               </ul>
             </div>
             <div class="idiomas">
               <h3>Idiomas</h3>
               <ul>
-                <li>
-                  Inglês
-                  <span>/ Fluente</span>
-                </li>
+                <li>Inglês <span>/ Fluente</span></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <footer class="footer" id="contato">
       <div class="footer-container">
-        <p class="footer-texto">
-          Estou disponível para novas oportunidades no momento! Entre em contato
-          comigo e marcamos uma conversa.
-        </p>
+        <div>
+          <p class="footer-texto">
+            Estou disponível para novas oportunidades, freelas e projetos que
+            precisem de execução técnica com clareza.
+          </p>
+          <a
+            class="button-primary footer-button"
+            href="mailto:eduardo.klein@live.com"
+          >
+            Enviar e-mail
+          </a>
+        </div>
         <ul class="footer-contato">
-          <li>eduardo.klein@live.com</li>
-          <li>+55 81 9 9753-4401</li>
           <li>
-            <a href="https://www.linkedin.com/in/eduardo-klein-c/">LinkedIn</a>
+            <a href="mailto:eduardo.klein@live.com">eduardo.klein@live.com</a>
           </li>
           <li>
-            <a href="https://github.com/eduardoklein">GitHub</a>
+            <a
+              href="https://www.linkedin.com/in/eduardo-klein-c/"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/eduardoklein"
+              target="_blank"
+              rel="noreferrer"
+              >GitHub</a
+            >
           </li>
         </ul>
         <p class="footer-copy">Eduardo Klein. Alguns direitos reservados.</p>
       </div>
     </footer>
+
+    <script src="./js/script.js"></script>
   </body>
-  <script src="./js/script.js"></script>
 </html>

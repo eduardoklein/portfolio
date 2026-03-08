@@ -1,66 +1,192 @@
 .introducao {
   max-width: 1200px;
-  padding: 40px 20px;
+  padding: 36px 20px 88px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 100px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 56px;
   align-items: center;
 }
 
-.introducao img {
-  border-radius: 20%;
+.intro-copy {
+  display: grid;
+  gap: 24px;
+}
+
+.intro-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .introducao h1 {
-  font-size: 4.5rem;
-  line-height: 1.125;
-  margin-bottom: 30px;
+  max-width: 11ch;
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  line-height: 1;
   position: relative;
 }
 
 .introducao h1::before {
   content: "";
   display: block;
-  width: 130px;
-  height: 100px;
-  background: url("../img/detalhe-verde-gradiente.svg") no-repeat center;
+  width: 138px;
+  height: 106px;
+  background: url("../img/detalhe-verde-gradiente.svg") no-repeat center / contain;
   position: absolute;
-  top: -15px;
-  left: -40px;
+  top: -20px;
+  left: -52px;
   z-index: -1;
 }
 
-.introducao p {
-  font-size: 1.5rem;
-  color: #525252;
+.intro-texto {
+  max-width: 34ch;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+.intro-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.intro-highlights li {
+  padding: 0.62rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid var(--line);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.intro-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.intro-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 18px;
+}
+
+.intro-stats div {
+  padding: 18px;
+  border-radius: 24px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.intro-stats dt {
+  margin-bottom: 6px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.intro-stats dd {
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.intro-visual {
+  position: relative;
+  padding: 26px;
+  border-radius: 36px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.42));
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow);
+}
+
+.intro-visual::after {
+  content: "";
+  position: absolute;
+  inset: auto -24px -22px auto;
+  width: 140px;
+  height: 140px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(14, 143, 98, 0.28), rgba(208, 164, 92, 0.18));
+  z-index: -1;
+}
+
+.intro-photo-frame {
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.intro-photo-frame img {
+  width: 100%;
+  height: auto;
+}
+
+.intro-card {
+  width: min(290px, calc(100% - 40px));
+  margin: -52px 0 0 auto;
+  padding: 18px 20px;
+  border-radius: 24px;
+  background: rgba(22, 22, 22, 0.9);
+  color: #f3efe8;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.intro-card strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ce3bd;
+}
+
+.intro-card p {
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 1000px) {
-  .introducao h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .introducao {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    font-size: 2rem;
-  }
-
-  .introducao h1::before {
-    width: 30px;
-    height: 10px;
-    left: 0px;
-  }
-}
-
-@media (max-width: 400px) {
   .introducao {
     grid-template-columns: 1fr;
   }
-  .introducao img {
-    display: none;
+
+  .introducao h1 {
+    max-width: 13ch;
+  }
+}
+
+@media (max-width: 720px) {
+  .introducao {
+    padding-top: 18px;
+    gap: 28px;
+  }
+
+  .introducao h1::before {
+    width: 80px;
+    height: 56px;
+    left: -10px;
+    top: -8px;
+  }
+
+  .intro-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-card {
+    width: auto;
+    margin-top: 18px;
   }
 }

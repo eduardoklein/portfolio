@@ -1,79 +1,74 @@
 body.dark {
-  background: #000;
-  color: #fff;
+  --bg: #101415;
+  --bg-elevated: rgba(17, 22, 23, 0.82);
+  --bg-strong: #161c1d;
+  --surface: #161c1d;
+  --surface-muted: #1a2224;
+  --text: #edf3ef;
+  --text-soft: #bcc7c1;
+  --text-muted: #8ea198;
+  --line: rgba(255, 255, 255, 0.08);
+  --accent: #58d39d;
+  --accent-strong: #2ca56f;
+  --accent-soft: rgba(88, 211, 157, 0.14);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
 }
 
-body.dark strong {
-  color: #fff;
-}
-
-body.dark .experiencia .subtitulo {
-  color: #141414;
+body.dark::before {
+  opacity: 0.12;
 }
 
 body.dark .toggle-theme-sun {
-  display: none;
+  display: none !important;
 }
 
 body.dark .toggle-theme-moon {
-  width: 24px;
-  height: auto;
-  text-decoration: none;
-  background: none;
-  border: none;
-  display: flex !important;
+  display: inline-flex !important;
 }
 
-body.dark .header-menu a {
-  color: #fff;
+body.dark .header-menu a,
+body.dark .header-user-preferences button,
+body.dark .button-secondary,
+body.dark .empresa,
+body.dark .intro-stats div {
+  background: rgba(17, 22, 23, 0.76);
+}
+
+body.dark .header-user-preferences button,
+body.dark .toggle-language {
+  color: #edf3ef;
+}
+
+body.dark .intro-visual {
+  background: linear-gradient(160deg, rgba(18, 24, 25, 0.88), rgba(11, 16, 17, 0.72));
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+body.dark .intro-card {
+  background: rgba(6, 9, 10, 0.92);
 }
 
 body.dark .experiencia .subtitulo {
-  color: #141414;
-}
-
-body.dark .empresa {
-  background: #141414;
-}
-
-body.dark .empresa-ano {
-  color: #a3a3a3;
-}
-
-body.dark .empresa-titulo-e-cargo {
-  font-size: 1.125rem;
-  line-height: 1.1;
-  font-weight: bold;
-}
-
-body.dark .empresa-funcao {
-  font-size: 0.875rem;
-  line-height: 1.4;
-  color: #a3a3a3;
-}
-
-body.dark .empresa-habilidade {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-content: start;
+  color: rgba(255, 255, 255, 0.08);
 }
 
 body.dark .empresa-habilidade li {
-  background: #000;
+  background: rgba(10, 14, 15, 0.94);
 }
 
-body.dark .introducao p {
-  color: #a3a3a3;
+body.dark .formacao {
+  background:
+    radial-gradient(circle at top right, rgba(88, 211, 157, 0.18), transparent 24%),
+    linear-gradient(180deg, #0d1112, #090b0c);
 }
 
-body.dark .experiencia-texto {
-  color: #a3a3a3;
+body.dark .footer {
+  background: #060808;
 }
 
-@media (max-width: 850px) {
-  body.dark .header a {
-    background: #141414;
-    border-radius: 4px;
+@media (max-width: 900px) {
+  body.dark .experiencia .subtitulo,
+  body.dark .formacao .subtitulo {
+    color: var(--text);
   }
 }

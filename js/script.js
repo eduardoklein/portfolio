@@ -1,27 +1,19 @@
+const THEME_KEY = "theme";
+
 document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    document.body.className = savedTheme;
+  const savedTheme = localStorage.getItem(THEME_KEY);
+
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
   }
 });
 
 function toggleTheme() {
-  if (document.body.classList.contains("dark")) {
-    document.body.classList.remove("dark");
-    localStorage.setItem("theme", "");
-  } else {
-    document.body.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  }
+  const isDark = document.body.classList.toggle("dark");
+  localStorage.setItem(THEME_KEY, isDark ? "dark" : "");
 }
 
 function changeLanguage(lang) {
-  const currentTheme = document.body.className;
-  localStorage.setItem("theme", currentTheme);
-
-  if (lang === "pt") {
-    window.location.href = "index.html";
-  } else {
-    window.location.href = "index-en.html";
-  }
+  const target = lang === "pt" ? "index.html" : "index-en.html";
+  window.location.href = target;
 }
