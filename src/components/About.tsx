@@ -1,4 +1,4 @@
-import { BookOpen, Scale, Code2, GraduationCap } from 'lucide-react';
+import { Compass } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface AboutProps {
@@ -6,141 +6,134 @@ interface AboutProps {
 }
 
 export default function About({ lang }: AboutProps) {
-  const journeySteps = lang === 'en' 
+  const trajectory = lang === 'en'
     ? [
         {
-          icon: <Code2 className="w-5 h-5 text-cyan-400" />,
-          title: "First Contact",
-          description: "IT and software development internships between 2014 and 2016 (SUAPE, Effetive Sistemas), where I built my initial foundation with programming logic and systems support."
+          period: "2014 — 2016",
+          title: "Early Systems Foundation & Technical Degree",
+          institution: "SUAPE, Effetive Sistemas & UNINASSAU",
+          description: "Technical Degree in IT, early immersion in corporate IT environments, ERP systems, and internal modules for Michelin Latin America."
         },
         {
-          icon: <Scale className="w-5 h-5 text-emerald-400" />,
-          title: "Transition & Law",
-          description: "Bachelor's Degree in Law (UNIFACOL, 2017-2022) and legal internship at TJPE (2019-2021). Law brought me crucial skills: high-precision writing, complex logical and structural analysis, and methodical problem-solving."
+          period: "2017 — 2022",
+          title: "Bachelor of Laws (LL.B.) & TJPE",
+          institution: "UNIFACOL & Pernambuco Court of Justice",
+          description: "Formed high-precision logical reasoning, complex procedural modeling, and exhaustive documentation discipline."
         },
         {
-          icon: <GraduationCap className="w-5 h-5 text-cyan-400" />,
-          title: "Return to Tech",
-          description: "1-year Technical Degree in Full Stack Web Development at Trybe (2023-2024). Published over 32 projects and delved deep into the modern JS/TS stack, databases, automated tests, and Docker."
+          period: "2023 — 2024",
+          title: "Full Stack Web Development Specialization",
+          institution: "Trybe Full Stack",
+          description: "Over 28 production-grade projects completed with rigorous focus on JavaScript, TypeScript, Docker, SQL, and automated test coverage."
         },
         {
-          icon: <BookOpen className="w-5 h-5 text-emerald-400" />,
-          title: "Consolidation & CS",
-          description: "Currently pursuing a Bachelor's in Computer Science (UNINTER, 2025-2029) and working on high-performance systems and biometrics at Evenyx."
+          period: "2025 — 2029",
+          title: "B.S. in Computer Science & Production Engineering",
+          institution: "UNINTER & Evenyx",
+          description: "Core full-stack engineering powering high-demand ticketing platforms (Carnatal, Fenearte), biometrics, and operational automation."
         }
       ]
     : [
         {
-          icon: <Code2 className="w-5 h-5 text-cyan-400" />,
-          title: "Primeiro Contato",
-          description: "Estágios em TI e desenvolvimento de software entre 2014 e 2016 (SUAPE, Effetive Sistemas), onde criei minha base inicial com lógica de programação e suporte a sistemas."
+          period: "2014 — 2016",
+          title: "Primeiros Passos em Sistemas & Curso Técnico",
+          institution: "SUAPE, Effetive Sistemas & UNINASSAU",
+          description: "Formação técnica em TI, imersão em ambientes corporativos, suporte ao ERP TOTVS e desenvolvimento de módulos para Michelin LatAm."
         },
         {
-          icon: <Scale className="w-5 h-5 text-emerald-400" />,
-          title: "Transição e Direito",
-          description: "Graduação em Direito (UNIFACOL, 2017-2022) e estágio jurídico no TJPE (2019-2021). A advocacia me trouxe habilidades cruciais: escrita de alta precisão, análise lógica e estrutural complexa e resolução metódica de problemas."
+          period: "2017 — 2022",
+          title: "Bacharelado em Direito & TJPE",
+          institution: "UNIFACOL & Tribunal de Justiça de PE",
+          description: "Desenvolvimento de raciocínio lógico de alta precisão, análise estrutural complexa e disciplina rigorosa de documentação."
         },
         {
-          icon: <GraduationCap className="w-5 h-5 text-cyan-400" />,
-          title: "A Volta à Tecnologia",
-          description: "Formação Técnica de 1 ano em Desenvolvimento Web Full Stack na Trybe (2023-2024). Publiquei mais de 32 projetos e me aprofundei na stack moderna de Javascript, Typescript, bancos de dados, testes automatizados e Docker."
+          period: "2023 — 2024",
+          title: "Formação Full Stack Intensiva",
+          institution: "Trybe Full Stack",
+          description: "Mais de 28 projetos práticos entregues com foco profundo em TypeScript, Node.js, testes automatizados e Docker."
         },
         {
-          icon: <BookOpen className="w-5 h-5 text-emerald-400" />,
-          title: "Consolidação e CS",
-          description: "Atualmente cursando Bacharelado em Ciência da Computação (UNINTER, 2025-2029) e atuando no desenvolvimento de sistemas de alta performance e biometria na Evenyx."
+          period: "2025 — 2029",
+          title: "Ciência da Computação & Atuação em Produção",
+          institution: "UNINTER & Evenyx",
+          description: "Engenharia full stack sustentando plataformas de bilhetagem de grande porte (Carnatal, Fenearte), validação facial e automação operacional."
         }
       ];
 
   return (
-    <section id="sobre" className="py-24 bg-[#080f21] relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="sobre" className="py-24 relative border-t border-white/[0.06]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         
-        {/* Section Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            {lang === 'en' ? 'About Me' : 'Sobre Mim'}
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-slate-300 text-xs font-semibold uppercase tracking-wider mb-4">
+            <Compass className="w-3.5 h-3.5 text-indigo-400" />
+            <span>{lang === 'en' ? 'Background & DNA' : 'Origem & Trajetória'}</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+            {lang === 'en' ? 'Engineering with Structural Rigor' : 'Engenharia com Rigor Estrutural'}
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-cyan-500 to-emerald-500 mx-auto"></div>
-          <p className="text-slate-400 mt-4 max-w-xl mx-auto">
+          <p className="mt-3 text-slate-400 text-sm sm:text-base leading-relaxed">
             {lang === 'en' 
-              ? 'A unique trajectory combining the precision of Law and the rigor of Computer Science.'
-              : 'Uma trajetória singular combinando a precisão do Direito e o rigor da Ciência da Computação.'}
+              ? 'Combining the structural and analytical discipline of legal training with the precision of computer science.'
+              : 'A confluência entre a análise lógica minuciosa da formação jurídica e o rigor técnico da Ciência da Computação.'}
           </p>
         </div>
 
-        {/* Narrative & Profile info */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        {/* Narrative & Timeline Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* Text Description */}
-          <div className="lg:col-span-7 space-y-6">
-            <h3 className="text-2xl font-bold text-white">
-              {lang === 'en' ? (
-                <>
-                  From legal analyst to <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">builder of robust systems</span>.
-                </>
-              ) : (
-                <>
-                  De analista jurídico a <span className="bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent">desenvolvedor de sistemas robustos</span>.
-                </>
-              )}
+          {/* Narrative Column */}
+          <div className="lg:col-span-5 rounded-3xl bg-white/[0.02] border border-white/[0.08] p-7 space-y-5">
+            <h3 className="text-xl font-bold text-white tracking-tight">
+              {lang === 'en' ? 'From Analysis to High-Impact Code' : 'Da Análise ao Código de Alto Impacto'}
             </h3>
             
-            <p className="text-slate-300 leading-relaxed">
-              {lang === 'en' 
-                ? 'My journey in technology is not linear, and that is my greatest strength. My background in Law structured my mind to think under rigid rules, interpret complex scenarios, and document processes clearly — skills that translate perfectly into writing clean code, architecting APIs, and debugging legacy systems.'
-                : 'Minha jornada na tecnologia não é linear, e isso é o meu maior trunfo. Minha passagem pelo Direito estruturou a minha mente para pensar sob regras rígidas, interpretar cenários complexos e documentar processos de forma clara — habilidades que se traduzem perfeitamente em escrever código limpo, arquitetar APIs e debugar sistemas legados.'}
-            </p>
-
-            <p className="text-slate-300 leading-relaxed">
+            <p className="text-sm text-slate-300 leading-relaxed font-normal">
               {lang === 'en'
-                ? 'Today, my absolute focus is the JavaScript/TypeScript and PHP/Laravel ecosystem. I enjoy solving performance bottlenecks, automating manual workflows, and building robust solutions. I have excellent communication skills and learn fast, adapting to dynamic, delivery-focused teams.'
-                : 'Hoje, meu foco absoluto é o ecossistema JavaScript/TypeScript e o ecossistema PHP/Laravel. Gosto de resolver gargalos de performance, automatizar fluxos manuais e construir soluções robustas. Tenho facilidade extrema de comunicação e aprendizado rápido, adaptando-me a times dinâmicos e focados em entrega.'}
+                ? "My background in Law was not a detour — it is my competitive advantage. It trained me to dissect complex edge cases, document architectures transparently, and approach problems with extreme attention to detail."
+                : "Minha passagem pelo Direito estruturou minha mente para dissecar cenários complexos, lidar com casos de borda e documentar processos de ponta a ponta com clareza absoluta."}
             </p>
 
-            <div className="pt-4 grid grid-cols-2 gap-4">
-              <div className="p-4 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                <div className="text-3xl font-extrabold text-cyan-400">32+</div>
-                <div className="text-sm text-slate-400 mt-1">
-                  {lang === 'en' ? 'Personal projects on GitHub' : 'Projetos autorais no GitHub'}
-                </div>
-              </div>
-              <div className="p-4 rounded-lg bg-slate-900/60 border border-slate-800/80">
-                <div className="text-3xl font-extrabold text-emerald-400">2.5M+</div>
-                <div className="text-sm text-slate-400 mt-1">
-                  {lang === 'en' ? 'Customers served at Evenyx' : 'Clientes impactados na Evenyx'}
-                </div>
-              </div>
+            <p className="text-sm text-slate-300 leading-relaxed font-normal">
+              {lang === 'en'
+                ? "At Evenyx and in my daily engineering practice, I focus on solving real operational bottlenecks: replacing slow manual workflows with fast, resilient systems, eliminating latency, and delivering reliable software under real-world event pressure."
+                : "No dia a dia na Evenyx, meu foco é resolver gargalos operacionais reais: transformar tarefas manuais em automações escaláveis, otimizar fluxos de validação biométrica e construir código limpo e resiliente sob pressão de eventos nacionais."}
+            </p>
+
+            <div className="pt-4 border-t border-white/[0.06] flex items-center gap-3 text-xs text-slate-400 font-medium">
+              <span className="w-2 h-2 rounded-full bg-indigo-400" />
+              <span>{lang === 'en' ? 'Recife, PE, Brazil • UTC-3' : 'Recife, PE • Fuso UTC-3'}</span>
             </div>
           </div>
 
-          {/* Timeline / Journey Steps */}
-          <div className="lg:col-span-5 space-y-6">
-            <h4 className="text-lg font-bold text-white font-mono uppercase tracking-wider mb-6">
-              {lang === 'en' ? 'My Journey' : 'A Minha Jornada'}
-            </h4>
-            
-            <div className="space-y-6 relative before:absolute before:inset-y-0 before:left-6 before:w-0.5 before:bg-slate-800">
-              {journeySteps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex gap-4 relative"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-slate-950 border border-slate-800 flex items-center justify-center z-10">
-                    {step.icon}
-                  </div>
-                  <div className="flex-1 bg-slate-900/40 p-4 rounded-lg border border-slate-800/50 hover:border-slate-700/60 transition-colors">
-                    <h5 className="font-bold text-white text-base">{step.title}</h5>
-                    <p className="text-sm text-slate-400 mt-2 leading-relaxed">{step.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
+          {/* Timeline Milestones Column */}
+          <div className="lg:col-span-7 space-y-4">
+            {trajectory.map((step, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, x: 15 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.35, delay: idx * 0.08 }}
+                className="rounded-2xl bg-white/[0.02] border border-white/[0.08] hover:border-white/[0.14] p-5 transition-all"
+              >
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                  <h4 className="text-base font-bold text-white tracking-tight">
+                    {step.title}
+                  </h4>
+                  <span className="text-xs font-mono text-indigo-400">
+                    {step.period}
+                  </span>
+                </div>
+                <div className="text-xs text-slate-400 font-medium mb-2">
+                  {step.institution}
+                </div>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  {step.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
 
         </div>
