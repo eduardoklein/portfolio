@@ -1,10 +1,32 @@
-import { Award, Globe, GraduationCap, ShieldCheck } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Award, Globe, GraduationCap, ShieldCheck, ExternalLink, Check, Copy, Sparkles } from 'lucide-react';
 
 interface CredentialsSectionProps {
   lang: 'en' | 'pt';
 }
 
 export default function CredentialsSection({ lang }: CredentialsSectionProps) {
+  const [copiedCode, setCopiedCode] = useState(false);
+  const validationNumber = "18085eb551044056aa69c74c388be1d5";
+
+  const handleCopyValidation = () => {
+    navigator.clipboard.writeText(validationNumber);
+    setCopiedCode(true);
+    setTimeout(() => setCopiedCode(false), 2000);
+  };
+
+  useEffect(() => {
+    const scriptId = 'credly-embed-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'https://cdn.credly.com/assets/utilities/embed.js';
+      document.body.appendChild(script);
+    }
+  }, []);
+
   const languages = lang === 'pt'
     ? [
         {
@@ -55,11 +77,20 @@ export default function CredentialsSection({ lang }: CredentialsSectionProps) {
 
   const certifications = [
     {
+      title: "AWS Certified AI Practitioner",
+      issuer: "Amazon Web Services (AWS)",
+      date: "2026 — 2029",
+      tags: ["Generative AI", "LLMs", "Machine Learning", "AWS Cloud", "Credly Verified"],
+      badge: "AWS Certified",
+      url: "https://www.credly.com/badges/f4199abb-5b31-4e6e-9689-4337b3e1e932"
+    },
+    {
       title: "Claude Code in Action",
       issuer: "Anthropic",
       date: "2026",
       tags: ["Agentic Coding", "AI Systems", "LLMs"],
-      badge: "AI Engineering"
+      badge: "AI Engineering",
+      url: null
     },
     {
       title: "Claude 101",
@@ -234,6 +265,121 @@ export default function CredentialsSection({ lang }: CredentialsSectionProps) {
             </h3>
           </div>
 
+          {/* Featured Spotlight: AWS Certified AI Practitioner & Credly Badge */}
+          <div className="mb-8 rounded-3xl bg-gradient-to-br from-white/[0.04] via-white/[0.02] to-amber-500/[0.03] border border-white/[0.1] hover:border-amber-500/30 p-6 sm:p-8 transition-all relative overflow-hidden group">
+            {/* Ambient atmospheric glow */}
+            <div className="absolute -top-12 -right-12 w-80 h-80 bg-amber-500/10 blur-[100px] rounded-full pointer-events-none" />
+            <div className="absolute -bottom-10 left-1/4 w-60 h-60 bg-indigo-500/10 blur-[80px] rounded-full pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-start gap-8 justify-between">
+              {/* Info Column */}
+              <div className="flex-1">
+                <div className="flex flex-wrap items-center gap-2.5 mb-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-300 border border-amber-500/25">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>{lang === 'pt' ? 'Credencial em Destaque' : 'Featured Credential'}</span>
+                  </span>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20">
+                    <ShieldCheck className="w-3.5 h-3.5" />
+                    <span>Credly Verified</span>
+                  </span>
+                </div>
+
+                <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                  AWS Certified AI Practitioner
+                </h3>
+                <p className="text-sm font-medium text-amber-300/90 mt-1">
+                  Amazon Web Services (AWS) Training and Certification
+                </p>
+
+                <p className="mt-4 text-sm text-slate-300 leading-relaxed max-w-2xl">
+                  {lang === 'pt'
+                    ? 'Certificação oficial da AWS comprovando proficiência em Inteligência Artificial Generativa, Large Language Models (LLMs), Machine Learning na nuvem, segurança, conformidade e arquitetura de soluções com os serviços de IA da AWS.'
+                    : 'Official AWS certification validating proficiency in Generative AI, Large Language Models (LLMs), Cloud Machine Learning, AI security, compliance, and solution architecture using AWS AI services.'}
+                </p>
+
+                {/* Validation Info Box */}
+                <div className="mt-6 pt-5 border-t border-white/[0.08] grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
+                      {lang === 'pt' ? 'Período de Validade' : 'Validity Period'}
+                    </span>
+                    <span className="text-xs sm:text-sm font-mono text-slate-200">
+                      {lang === 'pt' ? '26 de Setembro de 2026 — 2029' : 'September 26, 2026 — 2029'}
+                    </span>
+                    <span className="block text-[11px] text-emerald-400 font-mono mt-0.5">
+                      {lang === 'pt' ? '● Status: Ativo & Autenticado' : '● Status: Active & Authenticated'}
+                    </span>
+                  </div>
+
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-wider text-slate-400 block mb-1">
+                      {lang === 'pt' ? 'Número de Validação AWS' : 'AWS Validation Number'}
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <code className="text-xs font-mono text-amber-200 bg-black/40 px-2.5 py-1 rounded border border-white/[0.08]">
+                        {validationNumber}
+                      </code>
+                      <button
+                        onClick={handleCopyValidation}
+                        className="p-1.5 rounded-lg bg-white/[0.05] hover:bg-white/[0.1] text-slate-300 hover:text-white transition-all text-xs cursor-pointer border border-white/[0.08]"
+                        title={lang === 'pt' ? "Copiar código de validação" : "Copy validation code"}
+                        aria-label="Copy validation code"
+                      >
+                        {copiedCode ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Direct Action Links */}
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <a
+                    href="https://www.credly.com/badges/f4199abb-5b31-4e6e-9689-4337b3e1e932"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-slate-950 font-semibold text-xs hover:bg-slate-200 transition-all shadow-md"
+                  >
+                    <span>{lang === 'pt' ? 'Verificar Badge no Credly' : 'Verify Badge on Credly'}</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+
+                  <a
+                    href="https://aws.amazon.com/verification"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/[0.12] font-medium text-xs transition-all"
+                  >
+                    <span>{lang === 'pt' ? 'Validar na AWS' : 'Validate at AWS'}</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Credly Embed Badge Container */}
+              <div className="flex-shrink-0 flex flex-col items-center justify-center p-3 rounded-2xl bg-white/[0.03] border border-white/[0.08] shadow-2xl backdrop-blur-md">
+                <div
+                  data-iframe-width="150"
+                  data-iframe-height="270"
+                  data-share-badge-id="f4199abb-5b31-4e6e-9689-4337b3e1e932"
+                  data-share-badge-host="https://www.credly.com"
+                >
+                  <iframe
+                    name="acclaim-badge"
+                    allowTransparency={true}
+                    frameBorder="0"
+                    id="embedded-badge-f4199abb-5b31-4e6e-9689-4337b3e1e932"
+                    scrolling="no"
+                    src="https://www.credly.com/embedded_badge/f4199abb-5b31-4e6e-9689-4337b3e1e932"
+                    style={{ width: '150px', height: '270px' }}
+                    title="View my verified achievement on Credly."
+                    className="rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {certifications.map((cert, idx) => (
               <div
@@ -250,9 +396,22 @@ export default function CredentialsSection({ lang }: CredentialsSectionProps) {
                     </span>
                   </div>
 
-                  <h4 className="text-sm font-bold text-white tracking-tight">
-                    {cert.title}
-                  </h4>
+                  <div className="flex items-start justify-between gap-2">
+                    <h4 className="text-sm font-bold text-white tracking-tight">
+                      {cert.title}
+                    </h4>
+                    {cert.url && (
+                      <a
+                        href={cert.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-slate-400 hover:text-amber-300 transition-colors p-0.5"
+                        title={lang === 'pt' ? 'Ver credencial' : 'View credential'}
+                      >
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-white/[0.05] flex flex-wrap gap-1.5">
